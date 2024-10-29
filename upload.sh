@@ -4,16 +4,16 @@ rm -rf dist
 
 python setup.py sdist
 
-# 需要确保 twine 已经安装，如果没有安装，安装命令如下
+# You need to make sure twine is installed. If not, the installation command is as follows
 # pip install twine
 
-# 在 ~/ 目录下建立 .pypirc，内如如下
+# Create .pypirc in the ~/ directory with the following content:
 # [distutils]
 # index-servers = pypi
 # 
 # [pypi]
-# username:你的PyPi用户名
-# password:你的PyPi密码
+# username:Your PyPi username
+# password:Your PyPi password
 
 twine upload dist/*.tar.gz
 
